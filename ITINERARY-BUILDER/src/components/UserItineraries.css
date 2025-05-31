@@ -1,0 +1,195 @@
+.user-itineraries-page {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.user-itineraries-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/background5.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px) brightness(0.9);
+  transform: scale(1.05);
+  z-index: -2;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Loading and No Itineraries */
+.loading-spinner,
+.no-itineraries-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+/* Itineraries Grid */
+.itineraries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* Itinerary Card */
+.itinerary-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 340px;
+}
+
+.itinerary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Header */
+.card-header {
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 0.8rem;
+}
+
+.card-header h3 {
+  color: #1e3a8a;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.date-range {
+  color: #4b5563;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-range::before {
+  content: "📅";
+}
+
+/* Description inside Card */
+.ai-description {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 1rem;
+  max-height: 120px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Nice smooth scrollbar */
+.ai-description::-webkit-scrollbar {
+  width: 6px;
+}
+.ai-description::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ai-description::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.view-btn, .delete-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* View Button */
+.view-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.view-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .itineraries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .itinerary-card {
+    width: 100%;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .view-btn, .delete-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

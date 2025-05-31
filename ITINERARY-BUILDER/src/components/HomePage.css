@@ -1,0 +1,213 @@
+/* HomePage.css */
+
+/* Global theme variables (define in index.css or similar):
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+               Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --space-lg: 40px;
+  --space-md: 20px;
+  --radius-lg: 12px;
+  --blur: 8px;
+}
+*/
+
+.home-page {
+    position: relative;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    padding: var(--space-lg) var(--space-md);
+    overflow: hidden;
+  }
+  
+  /* Background blur layer */
+  .home-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/HomeClean.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    transform: scale(1.1);
+    z-index: -2;
+  }
+  
+  /* Overlay layer (optional gradient) */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    /* add a gradient if desired, e.g.
+       background: linear-gradient(135deg, rgba(0,106,255,0.8), rgba(44,82,130,0.8));
+    */
+  }
+  
+  /* Decorative circles */
+  .decor-top,
+  .decor-bottom {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+  }
+  .decor-top {
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+  }
+  .decor-bottom {
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+  }
+  
+  /* Main content wrapper */
+  .content-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-md);
+  }
+  
+  /* Header */
+  .home-header {
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+    position: relative;
+  }
+  .home-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .home-subtitle {
+    font-size: 1.35rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    text-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Start Planning button */
+  .start-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .start-button:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .start-button:focus {
+    outline: 2px solid rgba(255,255,255,0.5);
+    outline-offset: 2px;
+  }
+  .start-button span {
+    font-size: 1.25rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Curated places container with glass effect */
+  .content-card {
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .content-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  }
+  
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+  }
+  .scroll-indicator .text {
+    color: white;
+    font-size: 0.875rem;
+  }
+  .scroll-indicator .arrow {
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    margin-top: 4px;
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+  .typing-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible;
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+  
+  /* Blinking | cursor */
+  .typing-text::after {
+    content: "|";
+    position: absolute;
+    right: -8px;
+    animation: blink 0.9s steps(1) infinite;
+    color: #ffffff;
+  }
+  
+  .typing-text.finished::after {
+    content: "";
+    animation: none;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  

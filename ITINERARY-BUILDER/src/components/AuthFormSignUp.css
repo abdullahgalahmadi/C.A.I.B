@@ -1,0 +1,83 @@
+.signup-container {
+    max-width: 400px;
+    margin: 8rem auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: var(--font-sans);
+  }
+  .signup-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/jeddah1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    transform: scale(1.1);
+    z-index: -2;
+  }
+  .signup-heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+  }
+  
+  .signup-error {
+    color: #e53e3e;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .signup-container label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .signup-input {
+    width: 93.5%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .signup-button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 
+      background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+      transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: background-color, transform;
+  }
+  
+  .signup-button:hover {
+    background-color: var(--color-primary);
+
+  }
+  
+  .signup-footer {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .signup-link {
+    color: var(--color-accent);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

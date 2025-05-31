@@ -1,0 +1,50 @@
+/* AiItineraryPage.css */
+
+.ai-page-container {
+    padding: 30px;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-sans);
+  }
+  .ai-page-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/neomai.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    transform: scale(1.1);
+    z-index: -2;
+  }
+  
+  .ai-page-heading {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Spinner */
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border-top: 6px solid #ffffff;
+    border-radius: 100%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Keyframes for spinner */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

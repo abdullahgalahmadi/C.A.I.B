@@ -1,0 +1,66 @@
+.ai-form-container {
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    background: linear-gradient(to bottom, #4f46e5, #dbeafe);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    color: #111827;
+    font-family: var(--font-sans);
+  }
+  
+  .ai-form-container h1 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .ai-form-container label {
+    display: block;
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  
+  .ai-form-container select,
+  .ai-form-container input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .multi-select-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .multi-select-box label {
+    background-color: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .generate-btn {
+    display: block;
+    margin: 24px auto 0;
+    background-color: #10b981;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .generate-btn:hover {
+    background-color: #059669;
+  }
+  

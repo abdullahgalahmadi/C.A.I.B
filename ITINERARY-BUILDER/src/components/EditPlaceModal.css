@@ -1,0 +1,126 @@
+/* EditPlaceModal.css */
+
+/* Overlay backdrop */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  /* Modal container */
+  .modal {
+    width: 95%;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* Header */
+  .modal-header {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  /* Filter section */
+  .filter {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .filter-label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .type-select {
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  /* Status messages */
+  .status-text {
+    text-align: center;
+    margin: 20px 0;
+    color: #666;
+  }
+  
+  /* Places grid */
+  .places-grid {
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  /* Individual card */
+  .place-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Image */
+  .place-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  /* Card info */
+  .place-info {
+    padding: 12px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .place-name {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .place-address {
+    font-size: 14px;
+    color: #666;
+  }
+  .place-rating {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  
+  /* Replace button */
+  .select-btn {
+    margin-top: auto;
+    padding: 8px 12px;
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Cancel button */
+  .cancel-btn {
+    margin-top: 20px;
+    background: #cccccc;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  
